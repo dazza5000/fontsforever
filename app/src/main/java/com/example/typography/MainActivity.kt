@@ -5,18 +5,23 @@ package com.example.typography
 import android.os.Bundle
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
+import androidx.compose.foundation.border
+import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Text
 import androidx.compose.material3.Typography
 import androidx.compose.runtime.Composable
+import androidx.compose.ui.Modifier
+import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.text.ExperimentalTextApi
 import androidx.compose.ui.text.font.Font
 import androidx.compose.ui.text.font.FontFamily
 import androidx.compose.ui.text.font.FontStyle
 import androidx.compose.ui.text.font.FontVariation
 import androidx.compose.ui.text.font.FontWeight
+import androidx.compose.ui.unit.dp
 
 class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -27,13 +32,19 @@ class MainActivity : ComponentActivity() {
             Row {
                 MaterialTheme {
                     Column {
-                        Text(
-                            testText,
-                            style = MaterialTheme.typography.headlineLarge.copy(
-                                //                                fontSynthesis = FontSynthesis.None
-                            ),
-                            maxLines = 1,
-                        )
+                        Box(
+                            modifier = Modifier.border(
+                                1.dp, color = Color.Black
+                            )
+                        ) {
+                            Text(
+                                testText,
+                                style = MaterialTheme.typography.headlineLarge.copy(
+                                    //                                fontSynthesis = FontSynthesis.None
+                                ),
+                                maxLines = 1,
+                            )
+                        }
                         //                        Text("headlineMedium", style = MaterialTheme.typography.headlineMedium, maxLines = 1)
                         //                        Text("headlineSmall", style = MaterialTheme.typography.headlineSmall, maxLines = 1)
                         //                        Text("bodyLarge", style = MaterialTheme.typography.bodyLarge)
@@ -46,13 +57,19 @@ class MainActivity : ComponentActivity() {
                     typography = proximaTypography(),
                 ) {
                     Column {
-                        Text(
-                            testText,
-                            style = MaterialTheme.typography.headlineLarge.copy(
-//                                fontSynthesis = FontSynthesis.None
-                            ),
-                            maxLines = 1,
-                        )
+                        Box(
+                            modifier = Modifier.border(
+                                1.dp, color = Color.Black
+                            )
+                        ) {
+                            Text(
+                                testText,
+                                style = MaterialTheme.typography.headlineLarge.copy(
+                                    //                                fontSynthesis = FontSynthesis.None
+                                ),
+                                maxLines = 1,
+                            )
+                        }
 //                        Text("headlineMedium", style = MaterialTheme.typography.headlineMedium, maxLines = 1)
 //                        Text("headlineSmall", style = MaterialTheme.typography.headlineSmall, maxLines = 1)
 //                        Text("bodyLarge", style = MaterialTheme.typography.bodyLarge)
@@ -65,13 +82,20 @@ class MainActivity : ComponentActivity() {
                     typography = robotoTypography(),
                 ) {
                     Column {
-                        Text(
-                            testText,
-                            style = MaterialTheme.typography.headlineLarge.copy(
-//                                fontSynthesis = FontSynthesis.None
-                            ),
-                            maxLines = 1,
-                        )
+                        Box(
+                            modifier = Modifier.border(
+                                1.dp, color = Color.Black
+                            )
+                        ) {
+
+                            Text(
+                                testText,
+                                style = MaterialTheme.typography.headlineLarge.copy(
+                                    //                                fontSynthesis = FontSynthesis.None
+                                ),
+                                maxLines = 1,
+                            )
+                        }
 //                        Text("headlineMedium", style = MaterialTheme.typography.headlineMedium, maxLines = 1)
 //                        Text("headlineSmall", style = MaterialTheme.typography.headlineSmall, maxLines = 1)
 //                        Text("bodyLarge", style = MaterialTheme.typography.bodyLarge)
